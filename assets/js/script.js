@@ -2,7 +2,7 @@
 
 (() => {
   const STORAGE = { cart: 'priyanshi_cart_v1', orders: 'priyanshi_orders_v1', user: 'priyanshi_user_v1' };
-  const USD_TO_INR = 83;
+  const USD_TO_INR = 1;
   const read = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } };
   const save = (key, value) => localStorage.setItem(key, JSON.stringify(value));
   const money = value => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(Math.round(value));
